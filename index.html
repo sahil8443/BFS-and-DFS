@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFS & DFS Visualizer</title>
+    <link rel="stylesheet" href="fa.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a class="nav-logo">Graph Visualizer</a>
+            <ul class="nav-links">
+                <li><a href="dfs.html">DFS</a></li>
+                <li><a href="bfs.html">BFS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Input Section -->
+        <div class="input-container">
+            <h3>Input Details</h3>
+            <label for="verticesInput">Vertices (comma-separated):</label>
+            <input type="text" id="verticesInput" placeholder="E.g. A,B,C,D">
+
+            <label for="edgesInput">Edges (comma-separated):</label>
+            <input type="text" id="edgesInput" placeholder="E.g. A-B,B-C">
+
+            <label for="startVertex">Starting Vertex:</label>
+            <input type="text" id="startVertex" placeholder="Leave blank for default">
+
+            <label>Traversal Type:</label>
+            <label><input type="radio" name="traversalType" value="BFS"> BFS</label>
+            <label><input type="radio" name="traversalType" value="DFS"> DFS</label>
+
+            <div class="button-container">
+                <button onclick="startTraversal()">Start Traversal</button>
+                <button onclick="clearGraph()">Clear Graph</button>
+            </div>
+        </div>
+
+        <!-- Canvas Visualization Section -->
+        <div class="visualization-container">
+            <h3>Graph Visualization</h3>
+            <canvas id="graphCanvas" width="800" height="800"></canvas>
+            <div class="output">
+                <div id="steps" class="steps"></div>
+                <div id="resultSequence"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="fa.js"></script>
+</body>
+</html>
