@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breadth First Search (BFS)</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #5a67d8, #805ad5);
+            color: #fff;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+            animation: fadeIn 2s;
+        }
+        .content {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            text-align: left;
+            line-height: 1.8;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        .content h2 {
+            font-size: 1.8em;
+            color: #ffd700;
+        }
+        .content pre {
+            background: #f7fafc;
+            color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: #ffd700;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #e6b800;
+        }
+    </style>
+</head>
+<body>
+    <h1>Breadth First Search (BFS)</h1>
+    <div class="content">
+        <h2>Definition</h2>
+        <p>BFS is a graph traversal technique that explores all neighbors at the current depth before moving deeper.</p>
+        <h2>Applications</h2>
+        <ul>
+            <li>Finding shortest paths in unweighted graphs.</li>
+            <li>Level-order traversal of trees.</li>
+            <li>Social network analysis.</li>
+        </ul>
+        <h2>Pseudocode</h2>
+        <pre>
+BFS(graph, start):
+    create a queue Q
+    mark start as visited
+    enqueue start into Q
+    while Q is not empty:
+        node = dequeue(Q)
+        for each neighbor in graph[node]:
+            if neighbor is not visited:
+                mark neighbor as visited
+                enqueue neighbor
+        </pre>
+        <h2>Key Features</h2>
+        <p>Time Complexity: O(V + E)<br>Space Complexity: O(V)</p>
+    </div>
+    <button onclick="window.location.href='index.html';">Back to Home</button>
+</body>
+</html>
